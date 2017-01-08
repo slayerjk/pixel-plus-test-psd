@@ -1,0 +1,340 @@
+
+@font-face {
+  font-family: 'Open Sans Condensed Light';
+  src:
+    local('Open Sans Condensed Light'),
+    url('../font/OpenSans-CondLight.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'PT Sans Bold';
+  src:
+    local('PT Sans Bold'),
+    url('../font/pt sans bold.ttf') format('truetype');
+}
+
+body {
+  font-size: 0.625em;
+}
+
+.link-common {
+  text-decoration: none;
+}
+
+.list-common {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.media-common {
+  max-width: 100%;
+}
+
+.text-common {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  width: 980px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+/* --HEADER--------------------------------------- */
+
+.header {
+  padding-top: 36px;
+  padding-bottom: 58px;
+  color: gray;   /*check*/
+  outline: 1px solid blue;
+}
+
+.header::after {
+  display: table;
+  content: "";
+  clear: both;
+}
+
+.header__logo {
+  float: left;
+  padding-top: 29px;
+  outline: 1px solid red;
+}
+
+.header__company-name {
+  display: none;
+  color: #767676;
+}
+
+.header__company-slogan {
+  display: none;
+  color: #767676;
+}
+
+.header__contacts {
+  float: right;
+  text-align: right;
+  outline: 1px solid red;
+}
+
+.header-contacts__phones {
+  display: block;
+  font: 4em/1.15em "Open Sans Condensed Light", Arial, sans-serif;/*40/46*/
+  letter-spacing: 1px;
+  color: #767676;
+}
+
+.header-contacts__form {
+  padding-top: -5px;
+  font: 2.4em/1.92em "PT Sans Bold", Arial, sans-serif;/*24/46*/
+  border-bottom: 2px dashed #767676;
+  color: #767676;
+}
+
+/* --MENU--------------------------------------- */
+
+.main-menu {
+  outline: 1px solid red;
+  background-color: #777777;
+}
+
+.main-menu__element {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.main-menu__link {
+  position: relative;
+  display: block;
+  padding-top: 15px;
+  padding-bottom: 22px;
+  padding-left: 15px;
+  padding-right: 20px;
+  font: 3em "PT Sans", Arial, sans-serif;
+  color: #ffffff;
+  outline: 1px solid red;
+}
+
+.main-menu__element:first-of-type > .main-menu__link {
+  padding-left: 35px;
+  padding-right: 23px;
+}
+
+.main-menu__element:nth-of-type(4) > .main-menu__link {
+  padding-left: 10px;
+  padding-right: 15px;
+}
+
+.main-menu__link::after {
+  position: absolute;
+  top: 25px;
+  right: 0;
+  content: "";
+  width: 2px;
+  height: 26px;
+  background-color: #ffffff;
+}
+
+.main-menu__element:last-of-type {
+  border: none;
+}
+
+/* --SLIDER--------------------------------------- */
+
+.slider {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  text-align: center;
+  outline: 1px solid red;
+}
+
+.container_slider {
+  position: relative;
+  width: 1300px;
+  margin: 0 auto;
+}
+
+.slider__input {
+  display: none;
+}
+
+.slider__switch {
+  position: absolute;
+  top: 150px;
+  display: block;
+  width: 34px;
+  height: 61px;
+  cursor: pointer;
+  outline: 1px solid green;
+}
+
+.slider__switch_left {
+  left: 150px;
+  background: url('../img/slider__switch_left.png') no-repeat center;
+}
+
+.slider__switch_right {
+  right: 150px;
+  background: url('../img/slider__switch_right.png') no-repeat center;
+}
+
+.slider__slide {
+  display: none;
+}
+
+#slider-r1:checked ~ .slider__wrapper .slider__slide_1,
+#slider-r2:checked ~ .slider__wrapper .slider__slide_2 {
+  display: block;
+}
+
+.slider__wrapper {
+  width: inherit;
+  height: 400px;
+}
+
+.slider__slide_1 {
+  width: inherit;
+  height: inherit;
+  background: url('../img/slider__slide1.png') no-repeat center;
+  background-size: cover;
+}
+
+.slider__slide_2 {
+  width: inherit;
+  height: inherit;
+  background: url('../img/slider__slide2.png') no-repeat center;
+  background-size: cover;
+}
+
+/* --CATALOG--------------------------------------- */
+
+.catalog {
+  outline: 1px solid red;
+}
+
+.catalog__breadcrumb {
+  font: 1.4em/1.29em "PT Sans", Arial, sans-serif;/*14/18*/
+  color: #767676;
+}
+
+.leftblock {
+  outline: 1px solid red;
+}
+
+.catalog__menu-link {
+  font: 1.8em/1.67em "PT Sans", Arial, sans-serif;/*18/30*/
+  color: #767676;
+}
+
+.catalog__menu-link:hover {
+  text-decoration: underline;
+  color: #000000;
+}
+
+.catalog__menu-link_active {
+  text-decoration: underline;
+}
+
+.catalog__submenu-link {
+  font: 1.4em/1.57em "PT Sans", Arial, sans-serif;/*14/22*/
+  color: #767676;
+}
+
+.catalog__pricelist-name {
+  font: 3em/0.83em "PT Sans Bold", Arial, sans-serif;/*30/25*/
+  color: #444444;
+}
+
+.centerblock {
+  outline: 1px solid red;
+}
+
+.catalog__item {
+  width: 210px;
+  height: 350px;
+  padding: 20px 20px 10px 20px;
+  background-color: #dcdcdc;
+  outline: 1px solid red;
+}
+
+.catalog__item-description {
+  font: 1.8em/1em "PT Sans", Arial, sans-serif;/*18/18*/
+  color: #767676;
+}
+
+.catalog__item-price {
+  font: 2.8em/0.64em "PT Sans Bold", Arial, sans-serif;/*28/18*/
+  color: #444444;
+}
+
+.catalog__nav-link {
+  font: 1.4em/1.57em "PT Sans", Arial, sans-serif;/*14/22*/
+  color: #767676;
+}
+
+.catalog__nav-link_active {
+  font: 1.8em/1.67em "PT Sans", Arial, sans-serif;/*18/30*/
+  color: #444444;
+}
+
+.company-about__span {
+  font: 1.4em/1.57em "PT Sans", Arial, sans-serif;/*14/22*/
+  color: #767676;
+}
+
+/* --FOOTER--------------------------------------- */
+
+.footer {
+  background-color: #777777;
+  outline: 1px solid red;
+}
+
+.footer__company-info {
+  font: 1.4em/1.57em "PT Sans", Arial, sans-serif;/*14/22*/
+  color: #ffffff;
+}
+
+.footer__menu {
+  font: 1.4em/1.86em "PT Sans", Arial, sans-serif;/*14/26*/
+  text-decoration: underline;
+  color: #ffffff;
+}
+
+.footer__company-name {
+  font: 1.4em/1.57em "PT Sans", Arial, sans-serif;/*14/22*/
+  color: #ffffff;
+}
+
+/* --FEEDBACK--------------------------------------- */
+
+.feedback {
+  width: 465px;
+  height: 285px;
+  padding: 33px 60px 32px 60px;
+  outline: 1px solid red;
+}
+
+.feedback__title {
+  font: 2.4em "PT Sans Bold", Arial, sans-serif;
+  color: #535353;
+}
+
+.feedback__label {
+  font: 1.4em "PT Sans", Arial, sans-serif;
+  color: #535353;
+}
+
+.feedback__error {
+  font: italic 1.4em "PT Sans", Arial, sans-serif;
+  color: #dc7f7f;
+}
+
+.feedback__submit {
+  font: 1.777em "PT Sans Bold", Arial, sans-serif;
+  color: #ffffff;
+}
