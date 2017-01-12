@@ -217,12 +217,32 @@ body {
   outline: 1px solid red;
 }
 
+/* --CATALOG__breadcrumbs-- */
+
+.catalog__breadcrumbs {
+  padding-top: 10px;  
+  padding-bottom: 20px;
+  outline: 1px solid red;
+}
+
 .catalog__breadcrumb {
   font: 1.4em/1.29em "PT Sans", Arial, sans-serif;/*14/18*/
   color: #767676;
 }
 
-.leftblock {
+/* --CATALOG__main-content-- */
+
+.catalog__main-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+/* --CATALOG__leftblock-- */
+
+.catalog__leftblock {
+  width: 200px;
+  /*float: left;*/
   outline: 1px solid red;
 }
 
@@ -240,26 +260,67 @@ body {
   text-decoration: underline;
 }
 
+.catalog__submenu {
+  display: none;
+  padding-left: 20px;
+  list-style: circle;
+}
+
+.catalog__submenu_active {
+  display: block;
+}
+
 .catalog__submenu-link {
   font: 1.4em/1.57em "PT Sans", Arial, sans-serif;/*14/22*/
   color: #767676;
 }
 
+.catalog__pricelist {
+  padding-top: 80px;
+  text-align: center;
+}
+
 .catalog__pricelist-name {
+  display: block;
   font: 3em/0.83em "PT Sans Bold", Arial, sans-serif;/*30/25*/
   color: #444444;
 }
 
-.centerblock {
+/* --CATALOG__centerblock-- */
+
+.catalog__centerblock {
+  /*float: right;*/
+  width: 780px;
   outline: 1px solid red;
 }
 
+.catalog__items {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
 .catalog__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 210px;
-  height: 350px;
-  padding: 20px 20px 10px 20px;
+  height: 345px;
+  margin-right: 15px;
+  margin-bottom: 20px;
+  padding: 20px 20px 15px 20px;
   background-color: #dcdcdc;
+  overflow: hidden;
   outline: 1px solid red;
+}
+
+.catalog__item:nth-of-type(3n) {
+  margin-right: 0;
+}
+
+.catalog__item-img {
+  margin-bottom: 15px;
 }
 
 .catalog__item-description {
@@ -267,13 +328,38 @@ body {
   color: #767676;
 }
 
+.catalog-item__price-block {
+  position: relative;
+  width: 100%;
+  min-height: 25px;
+  margin-top: auto;
+  outline: 1px solid red;
+}
+
 .catalog__item-price {
   font: 2.8em/0.64em "PT Sans Bold", Arial, sans-serif;/*28/18*/
   color: #444444;
 }
 
+.catalog__cart-icon {
+  position: absolute;
+  top: 0;
+  right: 20px;
+}
+
+.catalog__nav-bar {
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+.catalog__nav-elem {
+  display: inline-block;
+  margin-right: 10px;
+}
+
 .catalog__nav-link {
   font: 1.4em/1.57em "PT Sans", Arial, sans-serif;/*14/22*/
+  text-align: center;
   color: #767676;
 }
 
@@ -281,6 +367,30 @@ body {
   font: 1.8em/1.67em "PT Sans", Arial, sans-serif;/*18/30*/
   color: #444444;
 }
+
+.company-about {
+  border-top: 2px solid #444444;
+}
+
+.company-about::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.company-about__col {
+  width: 50%;
+  outline: 1px solid red;
+}
+
+.company-about__col_left {
+  float: left;
+}
+
+.company-about__col_right {
+  float: right;
+}
+
 
 .company-about__span {
   font: 1.4em/1.57em "PT Sans", Arial, sans-serif;/*14/22*/
@@ -290,22 +400,56 @@ body {
 /* --FOOTER--------------------------------------- */
 
 .footer {
+  padding-top: 40px;
+  padding-bottom: 50px;
   background-color: #777777;
   outline: 1px solid red;
 }
 
-.footer__company-info {
+.container_footer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.footer__company-name {
+  width: 200px;
+  margin-right: 180px;
+  outline: 1px solid red;
+}
+
+.footer-company-name__span {
   font: 1.4em/1.57em "PT Sans", Arial, sans-serif;/*14/22*/
   color: #ffffff;
 }
 
 .footer__menu {
+  width: 200px;
+  outline: 1px solid red;
+}
+
+.footer-menu__link {
   font: 1.4em/1.86em "PT Sans", Arial, sans-serif;/*14/26*/
   text-decoration: underline;
   color: #ffffff;
 }
 
-.footer__company-name {
+.footer__company-logo {
+  position: relative;
+  width: 200px;
+  padding-left: 45px;
+  margin-left: auto;
+  outline: 1px solid red;
+}
+
+.logo_footer {
+  position: absolute;
+  top: 5px;
+  left: 0;
+}
+
+.footer-comapny-logo__description {
   font: 1.4em/1.57em "PT Sans", Arial, sans-serif;/*14/22*/
   color: #ffffff;
 }
