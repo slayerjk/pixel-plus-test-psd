@@ -2,30 +2,25 @@
 
 $(document).ready(function () {
   
-$('slider__switch_slide_1').hide();
-$('slider__switch_slide_2').hide();
-
+// fade effect on slides in slider-------
   $.fn.slidesSwitch = function () {
-    
+    $(".slider__slide").fadeToggle(1000);
   };
   
-  $('.slider__switch').click(function() {
+  $('.slider__switch').click(function () {
     $(document).slidesSwitch();
   });
   
+  setInterval( $.fn.slidesSwitch, 4000 );
+ //---------------------------------------
   
-  /*setInterval( $.fn.slidesSwitch, 4000 );*/
- 
-  
-  $.fn.hideMenu = function () {
-    if ( $(".main-menu:visible") ) {
-      $(".main-menu:visible").fadeTo('slow', 0);
-    } else if ( $(".main-menu").hide() ) {
-      $(".main-menu:visible").fadeTo('slow', 1);
-    }
+// test button on page for va tests------
+  $.fn.testFunction = function () {
+    $(".main-menu").fadeToggle('slow');
   };
 
-  $('.js-test-btn').click( function() {
-    $(document).hideMenu();
+  $('.js-test-btn').click(function () {
+    $(document).testFunction();
   });
+//----------------------------------------
 });
