@@ -8,55 +8,58 @@
   <title>Pixel-plus 3-level test</title>
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/jquery-ui.min.css">
   <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
   <script src="script/jquery-3.1.1.min.js"></script>
+  <script src="script/jquery-ui.min.js"></script>
   <!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
 </head>
 
-<body> 
- 
+<body>
+
   <a class="js-test-btn" href="#" style="position: fixed; display: block; padding: 10px; text-align: center; font-size: 20px; font-weight: bold; color: royalblue; background-color: gray">PushME!</a>
-  <! -Header---------------------------------------------------------------------------------- -->
+  <!-- Header________________________________________________________________________________________ -->
   <header class="header">
     <div class="container">
       <div class="logo header__logo">
-        <a class="text-common logo_header" href="#"> 
-         <img class="media-common" src="img/header__logo.png" width="273" height="100" alt="company-logo">
-          <h1 class="text-common header__company-name">Название компании</h1> <span class="text-common header__company-slogan">Самая клева компания</span> 
+        <a class="text-common logo_header" href="#">
+          <img class="media-common" src="img/header__logo.png" width="273" height="100" alt="company-logo">
+          <h1 class="text-common header__company-name">Название компании</h1>
+          <span class="text-common header__company-slogan">Самая клева компания</span>
         </a>
       </div>
-      <div class="header__contacts"> 
+      <div class="header__contacts">
         <span class="text-common header-contacts__phones">
           +7(499) 777-77-77<br>
           +7(499) 777-77-78
-        </span> 
-        <a class="link-common header-contacts__form feedback-js" href="#">Обратная связь</a> 
+        </span>
+        <a class="link-common header-contacts__form feedback-js" href="feedback-no-js.html">Обратная связь</a>
       </div>
     </div>
   </header>
-  <! -Main-menu---------------------------------------------------------------------------------- -->
+  <!-- _Main-menu________________________________________________________________________________________ -->
   <div class="main-menu">
     <div class="container">
       <ul class="list-common main-menu__list">
-        <li class="main-menu__element"> 
-          <a class="link-common main-menu__link" href="#">Главная</a> 
+        <li class="main-menu__element">
+          <a class="link-common main-menu__link" href="#">Главная</a>
         </li>
-        <li class="main-menu__element"> 
-          <a class="link-common main-menu__link" href="#">Каталог</a> 
+        <li class="main-menu__element">
+          <a class="link-common main-menu__link" href="#">Каталог</a>
         </li>
-        <li class="main-menu__element"> 
-          <a class="link-common main-menu__link" href="#">Доставка и оплата</a> 
+        <li class="main-menu__element">
+          <a class="link-common main-menu__link" href="#">Доставка и оплата</a>
         </li>
-        <li class="main-menu__element"> 
-          <a class="link-common main-menu__link" href="#">Прайс-лист</a> 
+        <li class="main-menu__element">
+          <a class="link-common main-menu__link" href="#">Прайс-лист</a>
         </li>
-        <li class="main-menu__element"> 
-          <a class="link-common main-menu__link" href="#">Контакты</a> 
+        <li class="main-menu__element">
+          <a class="link-common main-menu__link" href="#">Контакты</a>
         </li>
       </ul>
     </div>
   </div>
-  <! -Slider---------------------------------------------------------------------------------- -->
+  <!-- _Slider________________________________________________________________________________________ -->
   <div class="slider">
     <div class="container_slider">
       <input id="slider-r1" class="slider__input" type="radio" name="slider-radio" value="slider-r1" checked>
@@ -71,154 +74,154 @@
       </div>
     </div>
   </div>
-  <! -Catalog---------------------------------------------------------------------------------- -->
+  <!-- _Catalog________________________________________________________________________________________ -->
   <div class="catalog">
     <div class="container container_catalog">
-  <!-- Catalog__breadcrumbs--------------- -->
-      <div class="catalog__breadcrumbs"> 
-        <a class="link-common catalog__breadcrumb" href="#">Главная /</a> 
-        <a class="link-common catalog__breadcrumb" href="#">Каталог /</a> 
-        <a class="link-common catalog__breadcrumb" href="#">Бытовая техника</a> 
+      <!-- Catalog__breadcrumbs______________________________ -->
+      <div class="catalog__breadcrumbs">
+        <a class="link-common catalog__breadcrumb" href="#">Главная /</a>
+        <a class="link-common catalog__breadcrumb" href="#">Каталог /</a>
+        <a class="link-common catalog__breadcrumb" href="#">Бытовая техника</a>
       </div>
-<!-- Catalog__main-content------------------------------------------------------ -->
+      <!-- Catalog__main-content___________________________________________ -->
       <div class="catalog__main-content">
-<!-- Catalog__leftblock------------------------ -->
+        <!-- Catalog__leftblock____________________________________ -->
         <div class="catalog__leftblock">
           <ul class="list-common catalog__menu">
-            <li class="catalog__menu-item"> 
-              <a class="link-common catalog__menu-link" href="#">Автомобили</a> 
+            <li class="catalog__menu-item">
+              <a class="link-common catalog__menu-link" href="#">Автомобили</a>
             </li>
-            <li class="catalog__menu-item"> 
+            <li class="catalog__menu-item">
               <a class="link-common catalog__menu-link catalog__menu-link_active" href="#">Бытовая техника</a>
               <ul class="list-common catalog__submenu catalog__submenu_active">
-                <li class="catalog__menu-item catalog__submenu-item"> 
-                  <a class="link-common catalog__menu-link catalog__submenu-link" href="#">Микроволновки</a> 
+                <li class="catalog__menu-item catalog__submenu-item">
+                  <a class="link-common catalog__menu-link catalog__submenu-link" href="#">Микроволновки</a>
                 </li>
-                <li class="catalog__menu-item catalog__submenu-item"> 
-                  <a class="link-common catalog__menu-link catalog__submenu-link" href="#">Холодильники</a> 
+                <li class="catalog__menu-item catalog__submenu-item">
+                  <a class="link-common catalog__menu-link catalog__submenu-link" href="#">Холодильники</a>
                 </li>
-                <li class="catalog__menu-item catalog__submenu-item"> 
-                  <a class="link-common catalog__menu-link catalog__submenu-link" href="#">Посудомоечные машины</a> 
+                <li class="catalog__menu-item catalog__submenu-item">
+                  <a class="link-common catalog__menu-link catalog__submenu-link" href="#">Посудомоечные машины</a>
                 </li>
-                <li class="catalog__menu-item catalog__submenu-item"> 
-                  <a class="link-common catalog__menu-link catalog__submenu-link" href="#">Чайники</a> 
+                <li class="catalog__menu-item catalog__submenu-item">
+                  <a class="link-common catalog__menu-link catalog__submenu-link" href="#">Чайники</a>
                 </li>
               </ul>
             </li>
-            <li class="catalog__menu-item"> 
-              <a class="link-common catalog__menu-link" href="#">Мобильная техника</a> 
+            <li class="catalog__menu-item">
+              <a class="link-common catalog__menu-link" href="#">Мобильная техника</a>
             </li>
-            <li class="catalog__menu-item"> 
+            <li class="catalog__menu-item">
               <a class="link-common catalog__menu-link" href="#">Компьютеры</a> </li>
-            <li class="catalog__menu-item"> <a class="link-common catalog__menu-link" href="#">Одежда</a> 
+            <li class="catalog__menu-item"> <a class="link-common catalog__menu-link" href="#">Одежда</a>
             </li>
-            <li class="catalog__menu-item"> 
-              <a class="link-common catalog__menu-link" href="#">Недвижимость</a> 
+            <li class="catalog__menu-item">
+              <a class="link-common catalog__menu-link" href="#">Недвижимость</a>
             </li>
           </ul>
           <div class="catalog__pricelist">
             <a class="link-common catalog__pricelist-link" href="#"> <img class="media-common catalog__pricelist-img" src="img/catalog__pricelist-img.png" width="97" height="111" alt="excel-icon"> <span class="text-common catalog__pricelist-name">Прайс-лист</span> </a>
           </div>
         </div>
-  <!-- Catalog__centerblock--------------- -->
+        <!-- Catalog__centerblock_______________________ -->
         <div class="catalog__centerblock">
-  <!-- Catalog-centerblock__items--------------- -->          
+          <!-- Catalog-centerblock__items____________ -->
           <div class="catalog__items">
-            <div class="catalog__item catalog__item_1"> 
-               <img class="media-common catalog__item-img" src="img/catalog__item-img.png" width="210" height="209" alt="item-img"> 
-               <span class="text-common catalog__item-description">
+            <div class="catalog__item catalog__item_1">
+              <img class="media-common catalog__item-img" src="img/catalog__item-img.png" width="210" height="209" alt="item-img">
+              <span class="text-common catalog__item-description">
                 Самый клевый чайник,<br>
                 который надо купить!
               </span>
               <div class="catalog-item__price-block">
                 <span class="text-common catalog__item-price">1 900 р.</span>
-                <a class="link-common catalog__cart-link" href="#"> 
-                  <img class="media-common catalog__cart-icon" src="img/catalog__cart-icon.png" width="25" height="25" alt="cart-icon"> 
+                <a class="link-common catalog__cart-link" href="#">
+                  <img class="media-common catalog__cart-icon" src="img/catalog__cart-icon.png" width="25" height="25" alt="cart-icon">
                 </a>
               </div>
             </div>
-            <div class="catalog__item catalog__item_2"> 
-               <img class="media-common catalog__item-img" src="img/catalog__item-img.png" width="210" height="209" alt="item-img"> 
-               <span class="text-common catalog__item-description">
+            <div class="catalog__item catalog__item_2">
+              <img class="media-common catalog__item-img" src="img/catalog__item-img.png" width="210" height="209" alt="item-img">
+              <span class="text-common catalog__item-description">
                 Самый клевый чайник,<br>
                 который надо купить!
               </span>
               <div class="catalog-item__price-block">
                 <span class="text-common catalog__item-price">1 900 р.</span>
-                <a class="link-common catalog__cart-link" href="#"> 
-                  <img class="media-common catalog__cart-icon" src="img/catalog__cart-icon.png" width="25" height="25" alt="cart-icon"> 
+                <a class="link-common catalog__cart-link" href="#">
+                  <img class="media-common catalog__cart-icon" src="img/catalog__cart-icon.png" width="25" height="25" alt="cart-icon">
                 </a>
               </div>
             </div>
-            <div class="catalog__item catalog__item_3"> 
-               <img class="media-common catalog__item-img" src="img/catalog__item-img.png" width="210" height="209" alt="item-img"> 
-               <span class="text-common catalog__item-description">
+            <div class="catalog__item catalog__item_3">
+              <img class="media-common catalog__item-img" src="img/catalog__item-img.png" width="210" height="209" alt="item-img">
+              <span class="text-common catalog__item-description">
                 Самый клевый чайник,<br>
                 который надо купить!
               </span>
               <div class="catalog-item__price-block">
                 <span class="text-common catalog__item-price">1 900 р.</span>
-                <a class="link-common catalog__cart-link" href="#"> 
-                  <img class="media-common catalog__cart-icon" src="img/catalog__cart-icon.png" width="25" height="25" alt="cart-icon"> 
+                <a class="link-common catalog__cart-link" href="#">
+                  <img class="media-common catalog__cart-icon" src="img/catalog__cart-icon.png" width="25" height="25" alt="cart-icon">
                 </a>
               </div>
             </div>
-            <div class="catalog__item catalog__item_4"> 
-               <img class="media-common catalog__item-img" src="img/catalog__item-img.png" width="210" height="209" alt="item-img"> 
-               <span class="text-common catalog__item-description">
+            <div class="catalog__item catalog__item_4">
+              <img class="media-common catalog__item-img" src="img/catalog__item-img.png" width="210" height="209" alt="item-img">
+              <span class="text-common catalog__item-description">
                 Самый клевый чайник,<br>
                 который надо купить!
               </span>
               <div class="catalog-item__price-block">
                 <span class="text-common catalog__item-price">1 900 р.</span>
-                <a class="link-common catalog__cart-link" href="#"> 
-                  <img class="media-common catalog__cart-icon" src="img/catalog__cart-icon.png" width="25" height="25" alt="cart-icon"> 
+                <a class="link-common catalog__cart-link" href="#">
+                  <img class="media-common catalog__cart-icon" src="img/catalog__cart-icon.png" width="25" height="25" alt="cart-icon">
                 </a>
               </div>
             </div>
-            <div class="catalog__item catalog__item_5"> 
-               <img class="media-common catalog__item-img" src="img/catalog__item-img.png" width="210" height="209" alt="item-img"> 
-               <span class="text-common catalog__item-description">
+            <div class="catalog__item catalog__item_5">
+              <img class="media-common catalog__item-img" src="img/catalog__item-img.png" width="210" height="209" alt="item-img">
+              <span class="text-common catalog__item-description">
                 Самый клевый чайник,<br>
                 который надо купить!
               </span>
               <div class="catalog-item__price-block">
                 <span class="text-common catalog__item-price">1 900 р.</span>
-                <a class="link-common catalog__cart-link" href="#"> 
-                  <img class="media-common catalog__cart-icon" src="img/catalog__cart-icon.png" width="25" height="25" alt="cart-icon"> 
+                <a class="link-common catalog__cart-link" href="#">
+                  <img class="media-common catalog__cart-icon" src="img/catalog__cart-icon.png" width="25" height="25" alt="cart-icon">
                 </a>
               </div>
             </div>
           </div>
-<!-- Catalog-centerblock__nav-menu--------------- -->          
+          <!-- Catalog-centerblock__nav-menu_______________________ -->
           <div class="catalog__nav-bar">
             <ul class="list-common catalog__nav-list">
-              <li class="catalog__nav-elem"> 
-                <a class="link-common catalog__nav-link" href="#">1</a> 
+              <li class="catalog__nav-elem">
+                <a class="link-common catalog__nav-link" href="#">1</a>
               </li>
-              <li class="catalog__nav-elem"> 
-                <a class="link-common catalog__nav-link" href="#">2</a> 
+              <li class="catalog__nav-elem">
+                <a class="link-common catalog__nav-link" href="#">2</a>
               </li>
-              <li class="catalog__nav-elem"> 
-                <a class="link-common catalog__nav-link catalog__nav-link_active" href="#">3</a> 
+              <li class="catalog__nav-elem">
+                <a class="link-common catalog__nav-link catalog__nav-link_active" href="#">3</a>
               </li>
-              <li class="catalog__nav-elem"> 
-                <a class="link-common catalog__nav-link" href="#">4</a> 
+              <li class="catalog__nav-elem">
+                <a class="link-common catalog__nav-link" href="#">4</a>
               </li>
-              <li class="catalog__nav-elem"> 
-                <a class="link-common catalog__nav-link" href="#">5</a> 
+              <li class="catalog__nav-elem">
+                <a class="link-common catalog__nav-link" href="#">5</a>
               </li>
-              <li class="catalog__nav-elem"> 
-                <a class="link-common catalog__nav-link" href="#">6</a> 
+              <li class="catalog__nav-elem">
+                <a class="link-common catalog__nav-link" href="#">6</a>
               </li>
-              <li class="catalog__nav-elem"> 
-                <a class="link-common catalog__nav-link" href="#">7</a> 
+              <li class="catalog__nav-elem">
+                <a class="link-common catalog__nav-link" href="#">7</a>
               </li>
             </ul>
           </div>
-<!-- Catalog-centerblock__company-about--------------- -->          
+          <!-- Catalog-centerblock__company-about_______________________ -->
           <div class="company-about">
-            <div class="company-about__col company-about__col_left"> 
+            <div class="company-about__col company-about__col_left">
               <span class="text-common company-about__span">
                 Компания «Пиксель Плюс» существует более 6 лет, за это
                 время ма принимали участие в разработке более чем
@@ -230,7 +233,7 @@
                 угасания души.
               </span>
             </div>
-            <div class="company-about__col company-about__col_right"> 
+            <div class="company-about__col company-about__col_right">
               <span class="text-common company-about__span">
                 Одним из основных направлений работ нашей компании
                 является поисковое продвижение сайтов, на данный момент
@@ -242,16 +245,16 @@
                 момент отдел SEO состоит из 9 человек под руковод-<br>
                 ством ведущего специалиста, преимущественно работа-<br>
                 ющих в нашем московском офисе.
-              </span> 
+              </span>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <!-- Footer--------------------------------------------------------------- -->          
+  <!-- _Footer________________________________________________________________________________________ -->
   <footer class="footer">
-    <div class="container container_footer"> 
+    <div class="container container_footer">
       <div class="footer__company-name">
         <span class="text-common footer-company-name__span">
           © 2012–2013 ЗАО «Компания» <br>
@@ -275,16 +278,32 @@
           <a href="" class="footer-menu__link">Контакты</a>
         </li>
       </ul>
-      <div class="footer__company-logo"> 
-         <img class="media-common logo_footer" src="img/footer__company-logo.png" width="36" height="38" alt="footer-logo"> 
-         <span class="text-common footer-comapny-logo__description">
+      <div class="footer__company-logo">
+        <img class="media-common logo_footer" src="img/footer__company-logo.png" width="36" height="38" alt="footer-logo">
+        <span class="text-common footer-comapny-logo__description">
           Разработка сайта —<br> 
           компания «Пиксель Плюс»
-        </span> 
+        </span>
       </div>
     </div>
   </footer>
-  
+  <!-- _Feedback_________________________________________________________________________ -->
+  <div class="feedback feedback_hide feedback_js">
+    <button class="feedback__close" title="Закрыть"></button>
+    <form class="feedback__form" method="post" action="">
+      <h2 class="text-common feedback__title">Обратная связь</h2>
+      <label for="user-name" class="feedback__label">Ваше имя *</label>
+      <input id="user-name" type="text" class="feedback__input" name="user-name" required>
+      <label for="user-phone" class="feedback__label">Телефон *</label>
+      <input id="user-phone" type="text" class="feedback__input" name="user-phone" required>
+      <label for="user-email" class="feedback__label">Email *</label>
+      <input id="user-email" type="text" class="feedback__input" name="user-email" required>
+      <label for="user-message" class="feedback__label">Сообщение</label>
+      <textarea id="user-message" class="feedback__input feedback__textarea" name="user-message"></textarea>
+      <input type="submit" class="feedback__submit" value="Отправить">
+    </form>
+  </div>
+  <!-- ________________________________________________________________________________ -->
   <script src="script/script.js"></script>
 </body>
 
