@@ -1,18 +1,14 @@
 $(document).ready(function () {
   "use strict";
   
-  //feedback-modal-window
-  $('.feedback-js').click(function () {
-    event.preventDefault();
-    
-    $('.feedback').addClass('feedback_show');
-    
-  });
+  //feedback-modal-window-with-fade-effect
+  $.fn.toggleForm = function () {
+    $('.feedback').fadeToggle('slow');
+  };
   
-  $('.feedback__close').click(function () {
-    $('.feedback').hide(function () {
-      $(this).removeClass('feedback_show');
-    });
+  $('.feedback-js, .feedback__close').click(function () {
+    event.preventDefault();
+    $.fn.toggleForm();
   });
   
   // fade effect on slides in slider-------
