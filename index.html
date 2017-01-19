@@ -288,16 +288,17 @@
     </div>
   </footer>
   <!-- _Feedback_________________________________________________________________________ -->
+  <div class="overlay"></div>
   <div class="feedback feedback_hide feedback_js">
     <button class="feedback__close" title="Закрыть"></button>
     <form class="feedback__form" method="post" action="">
       <h2 class="text-common feedback__title">Обратная связь</h2>
       <label for="user-name" class="feedback__label">Ваше имя *</label>
-      <input id="user-name" type="text" class="feedback__input" name="user-name" required>
+      <input id="user-name" type="text" class="feedback__input feedback__input_required" name="user-name" required>
       <label for="user-phone" class="feedback__label">Телефон *</label>
-      <input id="user-phone" type="text" class="feedback__input" name="user-phone" required>
+      <input id="user-phone" type="text" class="feedback__input feedback__input_required" name="user-phone" required>
       <label for="user-email" class="feedback__label">Email *</label>
-      <input id="user-email" type="text" class="feedback__input" name="user-email" required>
+      <input id="user-email" type="text" class="feedback__input feedback__input_required" name="user-email" required>
       <label for="user-message" class="feedback__label">Сообщение</label>
       <textarea id="user-message" class="feedback__input feedback__textarea" name="user-message" rows="6"></textarea>
       <input type="submit" class="feedback__submit" value="Отправить">
