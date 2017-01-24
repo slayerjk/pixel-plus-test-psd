@@ -1,24 +1,38 @@
+/*global $, jQuery*/
+
 $(document).ready(function () {
   "use strict";
-  
-  //feedback-modal-window-with-fade-effect
+
+  //feedback-modal-window-with-fade-effect behaviour
   $.fn.toggleForm = function () {
     $('.overlay').toggle();
     $('.feedback').fadeToggle('slow');
   };
-  
+
   $('.feedback-js, .feedback__close').click(function () {
     event.preventDefault();
     $.fn.toggleForm();
   });
-  
-  $(document).on('click', '.feedback__submit', function () {
-    if (!$('#user-name') || !$('#user-phone') || !$('#user-email')) {
-      event.preventDefault();
-      $('.feedback__input_required').toggleClass('feedback__input_error').prop('placeholder', 'Поле обязательно для заполнения');
-    }
+
+  $('.feedback__submit').click(function (e) {
+    $('.feedback__input_required').each(function () {
+      if (!$(this).val()) {
+        $('.feedback').effect('pulsate', 1);
+        $(this).addClass('feedback__input_error').prop('placeholder', 'Поле обязателно для заполнения');
+      }
+    });
+    event.preventDefault();
   });
-      
+  
+  // slider switches behaviour
+  $('.slider__switch').hide();
+  $('.slider').mouseover(function () {
+    $('.slider__switch').show();
+  });
+  $('.slider').mouseleave(function () {
+    $('.slider__switch').hide();
+  });
+
   // fade effect on slides in slider-------
   $.fn.slidesSwitch = function () {
     $(".slider__slide").fadeToggle(1000);
@@ -29,7 +43,7 @@ $(document).ready(function () {
   });
 
   setInterval($.fn.slidesSwitch, 4000);
-  
+
   // test button on page for va tests------
   $.fn.testFunction = function () {
     $(".main-menu").effect('bounce', 1000);

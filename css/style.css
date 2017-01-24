@@ -639,7 +639,8 @@ body {
 .feedback__input_error {
   font-style: italic;
   color: red;
-  box-shadow: 0 0 5px -5px red;
+  box-shadow:inset 0 0 20px red;
+  border: 2px solid red;
 }
 
 .feedback__label {
