@@ -2,6 +2,15 @@
 
 $(document).ready(function () {
   "use strict";
+  
+  //event.preventDefault() gor IE9(event.returnValue = false)
+  $.fn.epd = function () {
+    if (event.preventDefault) {
+      event.preventDefault();
+    } else {
+      event.returnValue = false;
+    }
+  };
 
   //feedback-modal-window-with-fade-effect behaviour
   $.fn.toggleForm = function () {
@@ -10,7 +19,7 @@ $(document).ready(function () {
   };
 
   $('.feedback-js, .feedback__close').click(function () {
-    event.preventDefault();
+    $.fn.epd();
     $.fn.toggleForm();
   });
 
@@ -21,7 +30,7 @@ $(document).ready(function () {
         $(this).addClass('feedback__input_error').prop('placeholder', 'Поле обязателно для заполнения');
       }
     });
-    event.preventDefault();
+    $.fn.epd();
   });
   
   // slider switches behaviour
