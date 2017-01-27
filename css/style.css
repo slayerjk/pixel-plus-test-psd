@@ -84,12 +84,14 @@ body {
 }
 
 .header-contacts__phones {
+  display: inline-block;
   font: 4em/1.15em "OpenSansCondLight", Arial, sans-serif;/*40/46*/
   letter-spacing: 1px;
   color: #767676;
 }
 
 .header-contacts__feedback-link {
+  display: block;
   font: 2.4em/1.92em "PT Sans Bold", Arial, sans-serif;/*24/46*/
   border-bottom: 2px dashed #767676;
   color: #767676;
@@ -317,10 +319,11 @@ body {
 
 .catalog__pricelist {
   padding-top: 105px;
+  text-align: center;
 }
 
 .catalog__pricelist-img {
-  padding-left: 44px;  
+  padding-left: 0px;  
 }
 
 .catalog__pricelist-name {
@@ -328,6 +331,7 @@ body {
   padding-left: 16px;
   font: 3em/0.83em "PT Sans Bold", Arial, sans-serif;/*30/25*/
   letter-spacing: 0.035em;
+  text-align: center;
   color: #444444;
 }
 
@@ -336,7 +340,7 @@ body {
 .catalog__centerblock {
   width: 780px;
   padding-top: 5px;
-  outline: 1px solid red;
+  outline: 1px solid green;
 }
 
 .catalog__items {
@@ -461,14 +465,14 @@ body {
 
 .container_footer {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: stretch;
   flex-wrap: wrap;
 }
 
 .footer__company-name {
   width: 200px;
-  margin-right: 152px;
+  
   outline: 1px solid red;
 }
 
@@ -492,7 +496,7 @@ body {
   position: relative;
   width: 180px;
   padding-left: 45px;
-  margin-left: auto;
+  
   outline: 1px solid red;
 }
 
@@ -684,8 +688,14 @@ body {
     width: auto;
   }
   .catalog__centerblock {
+    flex-grow: 1;
     width: 600px;
   }
+  
+  .catalog__items {
+    justify-content: center;
+  }
+  
   .catalog__item {
     margin-right: 15px;
     margin-bottom: 20px;
@@ -707,4 +717,57 @@ body {
   }
 }
 
+@media screen and (max-width: 940px) {
+  .main-menu {
+    text-align: center;
+  }
+}
 
+@media screen and (max-width: 705px) {
+  .catalog__items {
+    justify-content: flex-start;
+  }
+  
+  .catalog__item {
+    margin-right: 0px;
+  }
+  
+  .catalog__item:nth-of-type(3n) {
+    margin-right: 0px;
+  }
+}
+
+@media screen and (max-width: 686px) {
+  .catalog__items {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 562px) {
+  .header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+  }
+  
+  .header__logo {
+    float: none;
+    margin-bottom: 20px;
+  }
+  
+  .header__contacts {
+    width: 100%;
+  }
+  
+  .container_footer {
+    justify-content: center;
+  }
+  
+  .footer__company-name {
+    margin-right: 10px;
+  }
+  
+  .footer__company-logo {
+    margin-top: 10px;
+  }
+}
