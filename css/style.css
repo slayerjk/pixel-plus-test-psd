@@ -113,6 +113,7 @@ body {
   padding-right: 23px;
   font: 3em "PT Sans", Arial, sans-serif;
   color: #ffffff;
+  -webkit-transition: all ease 0.3s;
   transition: all ease 0.3s;
 }
 
@@ -232,6 +233,7 @@ body {
 
 /* --CATALOG--------------------------------------- */
 
+
 /* --CATALOG__breadcrumbs-- */
 
 .catalog__breadcrumbs {
@@ -261,9 +263,15 @@ body {
 /* --CATALOG__main-content-- */
 
 .catalog__main-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: stretch;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
 }
 
 
@@ -355,16 +363,30 @@ body {
 }
 
 .catalog__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .catalog__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 225px;
   height: 347px;
   margin-right: 15px;
@@ -490,10 +512,17 @@ body {
 }
 
 .container_footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .footer__company-name {
@@ -560,24 +589,57 @@ body {
 
 /* --FEEDBACK--------------------------------------- */
 
-@keyframes bounce {
+@-webkit-keyframes bounce {
   0% {
-    transform: translate(-50%, -200%);
+    -webkit-transform: translate(-50%, -200%);
+            transform: translate(-50%, -200%);
   }
   50% {
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
   70% {
-    transform: translate(-50%, -150%);
+    -webkit-transform: translate(-50%, -150%);
+            transform: translate(-50%, -150%);
   }
   80% {
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
   90% {
-    transform: translate(-50%, -100%);
+    -webkit-transform: translate(-50%, -100%);
+            transform: translate(-50%, -100%);
   }
   100% {
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: translate(-50%, -200%);
+            transform: translate(-50%, -200%);
+  }
+  50% {
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  70% {
+    -webkit-transform: translate(-50%, -150%);
+            transform: translate(-50%, -150%);
+  }
+  80% {
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  90% {
+    -webkit-transform: translate(-50%, -100%);
+            transform: translate(-50%, -100%);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
 }
 
@@ -606,10 +668,19 @@ body {
 }
 
 .feedback__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: inherit;
 }
 
@@ -617,7 +688,8 @@ body {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .feedback_hide,
@@ -627,7 +699,8 @@ body {
 
 .feedback_show {
   display: block;
-  animation: bounce 1s;
+  -webkit-animation: bounce 1s;
+          animation: bounce 1s;
 }
 
 .feedback__close {
@@ -653,11 +726,13 @@ body {
 }
 
 .feedback__close::before {
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .feedback__close::after {
-  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 .feedback__title {
@@ -733,11 +808,15 @@ body {
     width: auto;
   }
   .catalog__centerblock {
-    flex-grow: 1;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
     width: 600px;
   }
   .catalog__items {
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .catalog__item {
     margin-right: 15px;
@@ -769,14 +848,18 @@ body {
 
 @media screen and (max-width: 768px) and (orientation: portrait) {
   .catalog__items {
-    justify-content: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     padding-left: 25px;
   }
 }
 
 @media screen and (max-width: 705px) {
   .catalog__items {
-    justify-content: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     padding-left: 7px;
   }
   .catalog__item {
@@ -789,7 +872,9 @@ body {
 
 @media screen and (max-width: 686px) {
   .catalog__items {
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     padding-left: 0px;
   }
 }
@@ -808,7 +893,9 @@ body {
     width: 100%;
   }
   .container_footer {
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .footer__company-name {
     margin-right: 10px;
@@ -846,8 +933,3 @@ body {
     right: 0;
   }
 }
-
-
-/* iPhone6(375*667) */
-
-@media screen and (orientation: portrait) and (max-width: 375px) {}
