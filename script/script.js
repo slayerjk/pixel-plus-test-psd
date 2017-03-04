@@ -3,7 +3,7 @@
 $(document).ready(function () {
   "use strict";
   
-  //event.preventDefault() for IE9(event.returnValue = false)
+  /*event.preventDefault() for IE9(event.returnValue = false)*/
   $.fn.epd = function () {
     if (event.preventDefault) {
       event.preventDefault();
@@ -12,7 +12,7 @@ $(document).ready(function () {
     }
   };
   
-// slider switches behaviour
+/* slider switches behaviour*/
   $('.slider__switch').hide();
   $('.slider').mouseover(function () {
     $('.slider__switch').show();
@@ -21,18 +21,39 @@ $(document).ready(function () {
     $('.slider__switch').hide();
   });
 
-  // fade effect on slides in slider-------
+  /* fade effect on slides in slider*/
   $.fn.slidesSwitch = function () {
-    $(".slider__slide").fadeToggle(1000);
+    var
+      $curInputChecked = $('.slider__input:checked'),
+      $nextInput = $curInputChecked.next(),
+      $prevInput = $curInputChecked.prev();
+    
+    $curInputChecked.removeAttr('checked');
+    if ($nextInput.prop('type') === 'radio') {
+      $nextInput.prop('checked', 'checked');
+    } else {
+      $nextInput = $('.slider__input').first().prop('checked', 'checked');
+    }
+    
+    $('.slider__switch_left').on('click', function () {
+      if ($prevInput.prop('type') === 'radio') {
+        $prevInput.prop('checked', 'checked');
+      } else {
+        $prevInput = $('.slider__input').last().prop('checked', 'checked');
+      }
+    });
+    $('.slider__switch_right').on('click', function () {
+      if ($nextInput.prop('type') === 'radio') {
+        $nextInput.prop('checked', 'checked');
+      } else {
+        $nextInput = $('.slider__input').first().prop('checked', 'checked');
+      }
+    });
   };
-
-  $('.slider__switch').click(function () {
-    $(document).slidesSwitch();
-  });
-
-  setInterval($.fn.slidesSwitch, 4000);
   
-  //feedback-modal-window-with-fade-effect behaviour
+  setInterval($.fn.slidesSwitch, 2000);
+  
+  /*feedback-modal-window-with-fade-effect behaviour*/
   $.fn.toggleForm = function () {
     $('.overlay').toggle();
     $('.feedback').fadeToggle('slow');
@@ -52,6 +73,4 @@ $(document).ready(function () {
     });
     $.fn.epd();
   });
-  
-//----------------------------------------
 });
